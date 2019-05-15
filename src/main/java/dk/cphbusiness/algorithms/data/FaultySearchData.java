@@ -1,5 +1,6 @@
 package dk.cphbusiness.algorithms.data;
 
+import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.Random;
@@ -26,8 +27,10 @@ public class FaultySearchData {
       }
     }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
     createData(System.out, 16, 1000.0, 2, 8);
+    PrintStream file = new PrintStream("/Users/AKA/tmp/faulty-1024.txt");
+    createData(file, 1024, 1_000_000.0, 256, 512, 734);
     }
   
 
